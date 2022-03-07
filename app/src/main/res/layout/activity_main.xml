@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/subground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_led1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_emoji_objects_24"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"/>
+
+        <ImageView
+            android:id="@+id/img_led2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_emoji_objects_24"
+            android:layout_toRightOf="@+id/img_led1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"/>
+
+        <ImageView
+            android:id="@+id/img_door"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_lock_24"
+            android:layout_below="@+id/img_led1"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/img_circular"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_loop_24"
+            android:layout_below="@+id/img_door"
+            android:layout_marginLeft="30dp"/>
+
+        <ImageView
+            android:id="@+id/img_allDevice"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            android:layout_below="@+id/img_door"
+            android:layout_toRightOf="@+id/img_circular"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:id="@+id/statusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="대기중"
+            android:layout_below="@+id/img_circular"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:backgroundTint="@color/black"
+        app:menu="@menu/bottom_menu"/>
+
+</RelativeLayout>
